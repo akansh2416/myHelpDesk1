@@ -1,10 +1,7 @@
 package com.mahaveer.myHelpDesk.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -23,6 +20,8 @@ public class Ticket {
     private String category;
     private String priority;
 
+    @Lob
+    @Column(columnDefinition = "LONGTEXT")
     private String aiResponse;
 
     private boolean offlineMode;
