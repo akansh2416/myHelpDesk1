@@ -11,7 +11,7 @@ public class HealthController {
         return "OK";
     }
 
-    @GetMapping("/actuator/health")
+    @GetMapping("/health")
     public String actuatorHealth() {
         return "{\"status\":\"UP\"}";
     }
