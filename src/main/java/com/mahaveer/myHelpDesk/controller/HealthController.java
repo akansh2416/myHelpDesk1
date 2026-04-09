@@ -10,9 +10,4 @@ public class HealthController {
     public String health() {
         return "OK";
     }
-
-    @GetMapping("/health")
-    public String actuatorHealth() {
-        return "{\"status\":\"UP\"}";
-    }
 }
